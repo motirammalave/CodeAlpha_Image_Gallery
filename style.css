@@ -1,70 +1,82 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f4f4f4;
-    text-align: center;
+body{
+margin:0;
+font-family:Arial;
+background:#f4f4f4;
+text-align:center;
 }
 
-h1 {
-    padding: 20px;
+header{
+background:linear-gradient(120deg,#667eea,#764ba2);
+color:white;
+padding:40px;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    padding: 20px;
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:40px;
 }
 
-.gallery img {
-    width: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
+.gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:10px;
+cursor:pointer;
+transition:0.4s;
+box-shadow:0 6px 15px rgba(0,0,0,0.2);
 }
 
-.gallery img:hover {
-    transform: scale(1.05);
+.gallery img:hover{
+transform:scale(1.05);
 }
 
-#lightbox {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.9);
-    justify-content: center;
-    align-items: center;
+#lightbox{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+justify-content:center;
+align-items:center;
 }
 
-#lightbox img {
-    width: 60%;
-    border-radius: 10px;
+#lightbox img{
+max-width:95%;
+max-height:95vh;
+width:auto;
+height:auto;
+object-fit:contain;
+border-radius:10px;
 }
 
-.close {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
+.close{
+position:absolute;
+top:20px;
+right:40px;
+font-size:40px;
+color:white;
+cursor:pointer;
 }
 
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 40px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
+.prev,.next{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+font-size:40px;
+background:none;
+border:none;
+color:white;
+cursor:pointer;
 }
 
-.prev {
-    left: 50px;
+.prev{
+left:40px;
 }
 
-.next {
-    right: 50px;
+.next{
+right:40px;
 }
